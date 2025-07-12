@@ -1,9 +1,13 @@
-function App() {
+import React from 'react'
+import { Profile } from './components/Profile' // Named
+import Gallery from './components/Gallery'  //Default
 
+const App = () => {
   return (
-    <>
-      <h1>Hello, World!</h1>
-    </>
+    <div>
+        <Profile />
+        <Gallery />
+    </div>
   )
 }
 
