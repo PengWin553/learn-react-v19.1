@@ -1,5 +1,10 @@
+In the object below, the full image URL is split into four parts: base URL, imageId, imageSize, and file extension.
+We want the image URL to combine these attributes together: base URL (always 'https://i.imgur.com/'), imageId ('7vQD0fP'), imageSize ('s'), and file extension (always '.jpg'). However, something is wrong with how the <img> tag specifies its src.
+Can you fix it?
+
+Code:
+
 const baseUrl = 'https://i.imgur.com/';
-const fileExtension = '.jpg'
 const person = {
   name: 'Gregorio Y. Zara',
   imageId: '7vQD0fP',
@@ -16,7 +21,7 @@ export default function App() {
       <h1>{person.name}'s Todos</h1>
       <img
         className="avatar"
-        src={baseUrl + person.imageId + person.imageSize + fileExtension}
+        src="{baseUrl}{person.imageId}{person.imageSize}.jpg"
         alt={person.name}
       />
       <ul>
